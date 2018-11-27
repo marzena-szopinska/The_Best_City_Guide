@@ -50,6 +50,12 @@ a {
   MEDIA QUERIES
 ==================================== */
 @media(min-width: 769px){
+
+  .wrap {
+    /* sticky footer */
+    min-height: calc(100vh - 121.6px);
+  }
+
   .container {
     /* center the container */
     width: 70%;

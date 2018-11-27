@@ -16,10 +16,22 @@ a {
   Base Layout Styles
 ==================================== */
 
+/* ---- Navigation ---- */
+.name {
+  margin: 0;
+}
+
 /* ---- Layout Containers ---- */
+
+.container {
+  /* center the container */
+  width: 70%;
+  margin: 0 auto;
+}
 
 .main-header {
 	background: #3acec2;
+  padding: 1em 0;
 }
 
 .main-footer {

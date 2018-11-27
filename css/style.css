@@ -1,6 +1,9 @@
 /* =================================
   Base Element Styles
 ==================================== */
+* {
+  box-sizing: border-box;
+}
 
 body {
 	line-height: 1.6;
@@ -24,9 +27,9 @@ a {
 /* ---- Layout Containers ---- */
 
 .container {
-  /* center the container */
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .main-header {
@@ -37,6 +40,21 @@ a {
 .main-footer {
 	padding: 2em 0;
 	background: #d9e4ea;
+  /* center the text */
+  text-align: center;
 }
 
 /* ---- Page Elements ---- */
+
+/* =================================
+  MEDIA QUERIES
+==================================== */
+@media(min-width: 769px){
+  .container {
+    /* center the container */
+    width: 70%;
+    /* stop the container streaching at 1000px and more */
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

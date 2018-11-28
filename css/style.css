@@ -88,11 +88,11 @@ a {
 
 /* ---- Clearfix ---- */
 
-/* .group:after {
+ .group::after {
   content: "";
   display: table;
   clear: both;
-} */
+}
 
 /* =================================
   MEDIA QUERIES
@@ -123,6 +123,34 @@ a {
     padding-right: 1em;
   }
 
+  .main-nav {
+    /* float the navigation bar to the right */
+    float: right;
+  }
+
+  .main-nav li {
+    /* float list elements to the left */
+    float: left;
+    margin-left: 12px;
+  }
+
+  .name {
+    /* float the name to the left */
+    float: left;
+  }
+
+
+  .feat-img {
+    width: 300px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+    border: solid 1px #d9e4ea;
+  }
+
+  /*
   .name,
   .main-nav,
   .main-nav li {
@@ -137,14 +165,5 @@ a {
   .main-nav li {
     margin-right: 12px;
   }
-
-  .feat-img {
-    width: 300px;
-    float: left;
-    margin-top: 5px;
-    margin-right: 25px;
-    margin-bottom: 25px;
-    padding: 10px;
-    border: solid 1px #d9e4ea;
-  }
+  */
 }

@@ -86,7 +86,13 @@ a {
   text-align: center;
 }
 
-/* ---- Page Elements ---- */
+/* ---- Clearfix ---- */
+
+/* .group:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
 
 /* =================================
   MEDIA QUERIES
@@ -106,6 +112,17 @@ a {
     margin: 0 auto;
   }
 
+  .col {
+    width: 50%;
+    /* remove the default gap between inline-block elements */
+    margin-right: -4px;
+    display: inline-block;
+    /* aling the content to the top */
+    vertical-align: top;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
   .name,
   .main-nav,
   .main-nav li {
@@ -115,5 +132,9 @@ a {
   .name {
     width: 240px;
     margin-right: 50px;
+  }
+
+  .main-nav li {
+    margin-right: 12px;
   }
 }

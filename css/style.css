@@ -1,6 +1,7 @@
 /* =================================
   Base Element Styles
 ==================================== */
+
 * {
 	box-sizing: border-box;
 }
@@ -13,7 +14,7 @@ body {
 
 p {
 	font-size: .95em;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.8em;
 }
 
 h2,
@@ -23,12 +24,39 @@ a {
 }
 
 h2,
-h3 {
+h3,
+h4 {
 	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
 }
 
 a {
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+  position: relative;
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 2em 1em;
+	background: rgba(19,43,102, .85);
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* =================================
@@ -36,134 +64,138 @@ a {
 ==================================== */
 
 /* ---- Navigation ---- */
+
 .name {
-  font-size: 1.25em;
+	font-size: 1.25em;
+	margin: 0;
 }
 
-.name,
-.main-nav li {
-	text-align: center;
-	background: #fff;
-	margin-top: 6px;
-	margin-bottom: 6px;
+.main-nav {
+	margin-top: 5px;
 }
 
-.main-nav a {
-	font-size: .95em;
-	color: #3acec2;
-	text-transform: uppercase;
-}
+	.name a,
+	.main-nav a {
+		display: block;
+		text-align: center;
+		padding: 10px 15px;
+	}
 
-.main-nav a:hover {
-	color: #093a58;
-}
+	.main-nav a {
+		font-size: .95em;
+		color: #3acec2;
+		text-transform: uppercase;
+	}
 
-.name a,
-.main-nav a {
-  padding: 10px 15px;
-  display: block;
-}
+	.main-nav a:hover {
+		color: #093a58;
+	}
 
 /* ---- Layout Containers ---- */
 
-.container {
-  width: 100%;
-  padding-left: 1em;
-  padding-right: 1em;
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
 }
 
-.main-header {
-  padding-top: 1.5em;
-	padding-bottom: 1.5em;
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	color: #fff;
 	background: #3acec2;
-	margin-bottom: 30px;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
 .main-footer {
-	padding: 2em 0;
 	background: #d9e4ea;
-  /* center the text */
-  text-align: center;
+	padding: 2em 0;
+	margin-top: 30px;
 }
 
-/* ---- Clearfix ---- */
+/* ---- Page Elements ---- */
 
- .group::after {
-  content: "";
-  display: table;
-  clear: both;
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.icon-location {
+  width: 30px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
 }
 
 /* =================================
-  MEDIA QUERIES
+  Media Queries
 ==================================== */
-@media(min-width: 769px){
 
-  .wrap {
-    /* sticky footer */
-    min-height: calc(100vh - 121.6px);
-  }
+@media (min-width: 769px) {
 
-  .container {
-    /* center the container */
-    width: 80%;
-    /* stop the container streaching at 1000px and more */
-    max-width: 1150px;
-    margin: 0 auto;
-  }
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
 
-  .col {
-    width: 50%;
-    /* remove the default gap between inline-block elements */
-    margin-right: -4px;
-    display: inline-block;
-    /* aling the content to the top */
-    vertical-align: top;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+	.name,
+	.col {
+		float: left;
+	}
 
-  .main-nav {
-    /* float the navigation bar to the right */
-    float: right;
-  }
+	.primary,
+	.secondary {
+		width: 50%;
+	}
 
-  .main-nav li {
-    /* float list elements to the left */
-    float: left;
-    margin-left: 12px;
-  }
+	.main-nav {
+		float: right;
+	}
 
-  .name {
-    /* float the name to the left */
-    float: left;
-  }
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
 
+	.tagline {
+		font-size: 1.4em;
+	}
 
-  .feat-img {
-    width: 300px;
-    float: left;
-    margin-top: 5px;
-    margin-right: 25px;
-    margin-bottom: 25px;
-    padding: 10px;
-    border: solid 1px #d9e4ea;
-  }
+	/* ---- Float clearfix ---- */
 
-  /*
-  .name,
-  .main-nav,
-  .main-nav li {
-    display: inline-block;
-  }
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 
-  .name {
-    width: 240px;
-    margin-right: 50px;
-  }
+}
 
-  .main-nav li {
-    margin-right: 12px;
-  }
-  */
+@media (min-width: 1025px) {
+
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
+
 }

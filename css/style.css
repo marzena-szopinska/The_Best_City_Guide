@@ -161,6 +161,7 @@ figcaption {
     width: 100%;
     /* make sure it will always stick to the top */
     top: 0;
+    z-index: 1000;
   }
 
 	.name,
